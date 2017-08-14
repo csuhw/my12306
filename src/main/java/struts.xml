@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <package name="my12306" extends="struts-default">
+        <action name="hello" class="action.HelloAction">
+            <result name="success">index.html</result>
+        </action>
+        <action name="station" class="action.TrainAction" method="execute">
+            <result name="success">WEB-INF/jsp/czgl.jsp</result>
+        </action>
+        <action name="updateStation" class="action.StationAction" method="updateStation">
+            <result name="success">WEB-INF/jsp/houtai.jsp</result>
+            <result name="input">WEB-INF/jsp/czgl.jsp</result>
+        </action>
+        <action name="houtai" class="action.NavigationAction">
+            <result name="success">WEB-INF/jsp/houtai.jsp</result>
+        </action>
+        <action name="updateTrain" class="action.TrainAction" method="updateTrain">
+            <result name="success">WEB-INF/jsp/lcgl.jsp</result>
+            <result name="input">WEB-INF/jsp/lcgl.jsp</result>
+        </action>
+        <action name="selectTrain" class="action.TrainAction" method="selectTrain">
+            <result name="success">WEB-INF/jsp/lcgl.jsp</result>
+        </action>
+        <action name="deleteTrain" class="action.TrainAction" method="deleteTrain">
+            <result name="success">WEB-INF/jsp/lcgl.jsp</result>
+        </action>
+        <action name="showStation" class="action.StationAction" method="showAllStation">
+            <result name="success">WEB-INF/jsp/czgl.jsp</result>
+        </action>
+        <action name="selectRoute" class="action.RouteAction" method="selectRouteByTId">
+            <result name="success">WEB-INF/jsp/xlgl.jsp</result>
+        </action>
+        <action name="updateRoute" class="action.RouteAction" method="selectRouteByTId">
+            <result name="success">WEB-INF/jsp/xlgl.jsp</result>
+        </action>
+        <action name="routeManage" class="action.RouteAction">
+            <result name="success">WEB-INF/jsp/xlgl.jsp</result>
+        </action>
+        <action name="addxl" class="action.RouteAction">
+            <result name="success">WEB-INF/jsp/addxl.jsp</result>
+        </action>
+        <action name="addRoute" class="action.RouteAction" method="addRoute">
+            <result name="success">WEB-INF/jsp/xlgl.jsp</result>
+            <result name="input">WEB-INF/jsp/addxl.jsp</result>
+        </action>
+        <action name="lcbzManage" class="action.FormationAction">
+            <result name="success">WEB-INF/jsp/lcbz.jsp</result>
+        </action>
+        <action name="selectFormation" class="action.FormationAction" method="selectRouteByTId">
+            <result name="success">WEB-INF/jsp/lcbz.jsp</result>
+        </action>
+        <action name="addlcbz" class="action.FormationAction">
+
+            <result name="success">WEB-INF/jsp/addlcbz.jsp</result>
+        </action>
+        <action name="selectPlan" class="action.PlanAction" method="selectPlanByTrain_id">
+            <result name="success">WEB-INF/jsp/jhgl.jsp</result>
+        </action>
+        <action name="planManage" class="action.PlanAction">
+            <result name="success">WEB-INF/jsp/jhgl.jsp</result>
+        </action>
+        <action name="trainManage" class="action.TrainAction">
+            <result name="success">WEB-INF/jsp/lcgl.jsp</result>
+        </action>
+        <action name="aa" class="action.RouteAction">
+            <result name="success">WEB-INF/jsp/xlgl.jsp</result>
+        </action>
+        <action name="pjlManage" class="action.NavigationAction">
+            <result name="success">WEB-INF/jsp/pjl.jsp</result>
+        </action>
+        <action name="dydjManage" class="action.NavigationAction">
+            <result name="success">WEB-INF/jsp/dydj.jsp</result>
+        </action>
+        <action name="ticketManage" class="action.NavigationAction">
+            <result name="success">WEB-INF/jsp/ticketManagement.jsp</result>
+        </action>
+        <action name="qdbManage" class="action.NavigationAction">
+            <result name="success">WEB-INF/jsp/qdb.jsp</result>
+        </action>
+        <action name="book" class="action.NavigationAction">
+            <result name="success">WEB-INF/jsp/book.jsp</result>
+        </action>
+        <action name="searchTicket" class="action.SearchTicketAction" method="searchTrain">
+            <result name="success">WEB-INF/jsp/book.jsp</result>
+        </action>
+        <action name="register" class="action.NavigationAction">
+            <result name="success">WEB-INF/jsp/register.jsp</result>
+        </action>
+        <action name="login" class="action.NavigationAction">
+            <result name="success">WEB-INF/jsp/login.jsp</result>
+        </action>
+        <action name="getUser" class="action.UserAction" method="getUserByNameAndPwd">
+            <result name="success">WEB-INF/jsp/book.jsp</result>
+            <result name="input">WEB-INF/jsp/login.jsp</result>
+        </action>
+        <action name="check" class="action.SearchTicketAction" method="checkOrder">
+            <result name="success">WEB-INF/jsp/check.jsp</result>
+        </action>
+        <action name="addTrainformation" class="action.NavigationAction">
+            <result name="success">WEB-INF/jsp/addTrainformationManage.jsp</result>
+        </action>
+        <action name="addTrainManage" class="action.NavigationAction">
+            <result name="success">WEB-INF/jsp/addTrainManage.jsp</result>
+        </action>
+    </package>
+
+
+</struts>
